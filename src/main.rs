@@ -28,7 +28,7 @@ fn main() {
     loop{
         let mut guess = String::new();
         std::io::stdin().read_line(&mut guess).unwrap();
-        if guess.trim().to_lowercase() == "quit" {
+        if guess.trim().to_lowercase() != "exit" {
 
             match parse_number(&guess) {
                 Ok(number) => {
